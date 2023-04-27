@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
     //public TextMeshProUGUI scoreText;
     public float scoreplus =0;
+    private Spawner spawner;
+    public Button retryButton;
+
 
     private void Awake() {
     if (Instance == null) {
@@ -28,10 +31,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawner = FindObjectOfType<Spawner>();
         NewGame();
     }
     public void NewGame(){
-        scoreplus=0;
+        calculation.scoreValue=0;
+        spawner.gameObject.SetActive(true);
+        retryButton.gameObject.SetActive(false);
 
     }
 
@@ -42,6 +48,17 @@ public class GameManager : MonoBehaviour
         //scoreplus=scoreplus+5;
         //scoreText.text=Mathf.FloorToInt(scoreplus).ToString();
     }
+    
+    public void GameOver() {
+
+    enabled = false;
+
+    spawner.gameObject.SetActive(false);
+
+    //gameOverText.gameObject.SetActive(true);
+    retryButton.gameObject.SetActive(true);
+    //UpdateHiScore();
+  }
     
 
 

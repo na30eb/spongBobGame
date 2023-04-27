@@ -18,5 +18,9 @@ public class calculation : MonoBehaviour
     void Update()
     {
         score.text=scoreValue.ToString();
+        if(scoreValue<0){
+            GameManager.Instance.GameOver();
+            score.text="gameover";
+        }
     }
 }

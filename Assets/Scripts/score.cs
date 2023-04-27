@@ -11,7 +11,7 @@ public class score : MonoBehaviour
 
     void OnMouseDown()
     {
-        calculation.scoreValue += 10;
+        calculation.scoreValue += 2;
         Destroy(gameObject);
         
     }

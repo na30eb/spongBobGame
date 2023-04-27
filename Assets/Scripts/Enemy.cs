@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 
     void OnMouseDown()
     {
-        calculation.scoreValue -= 10;
+        calculation.scoreValue -= 3;
         Destroy(gameObject);
         
     }
