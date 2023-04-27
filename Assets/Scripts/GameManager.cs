@@ -35,8 +35,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += score * Time.deltaTime;
 
+    }
+    public void scoreplus(){
+        score = score+5 ;
     }
 
 }
