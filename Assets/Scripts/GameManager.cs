@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance {get; private set;}
-    float score ;
+    //public TextMeshProUGUI scoreText;
+    public float scoreplus =0;
 
     private void Awake() {
     if (Instance == null) {
@@ -28,7 +31,7 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
     public void NewGame(){
-        score=0;
+        scoreplus=0;
 
     }
 
@@ -36,9 +39,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
+        //scoreplus=scoreplus+5;
+        //scoreText.text=Mathf.FloorToInt(scoreplus).ToString();
     }
-    public void scoreplus(){
-        score = score+5 ;
-    }
+    
+
 
 }

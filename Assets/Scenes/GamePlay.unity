@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d89e3d2e32d43bd4f8e86136e2fd874c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreplus: 0
 --- !u!4 &187252430
 Transform:
   m_ObjectHideFlags: 0
@@ -282,14 +283,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - prefab: {fileID: 9170501879578107058, guid: 7feaaa2bb1a9aed47aae926fe3ad2e74, type: 3}
-    spawnChance: 0.008
-  - prefab: {fileID: 5191648054155504898, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
+    spawnChance: 0.071
+  - prefab: {fileID: 3479303838154210267, guid: 51c5ab62a0554ca44bdb8a4f21b75b9e, type: 3}
     spawnChance: 0.035
-  - prefab: {fileID: 3566085182901286796, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
+  - prefab: {fileID: 4906917857128783684, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
     spawnChance: 0.063
-  - prefab: {fileID: 3112768895576667632, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
-    spawnChance: 0
-  - prefab: {fileID: 8734197011054326394, guid: 7bb5f54d2af8c7748b7c553d316169cd, type: 3}
+  - prefab: {fileID: 1832497886249185308, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
+    spawnChance: 0.861
+  - prefab: {fileID: 7770921036266863717, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
     spawnChance: 0.09
   minSpawnRate: 1
   maxSpawnRate: 2
@@ -419,9 +420,10 @@ GameObject:
   m_Component:
   - component: {fileID: 717592449}
   - component: {fileID: 717592451}
+  - component: {fileID: 717592452}
   - component: {fileID: 717592450}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Scoretext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,9 +470,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 0000
-  m_isRightToLeft: 1
-  m_fontAsset: {fileID: 11400000, guid: eb29940e8a9923944b6cb3c60801039c, type: 2}
-  m_sharedMaterial: {fileID: 9077728729651195161, guid: eb29940e8a9923944b6cb3c60801039c, type: 2}
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -544,6 +546,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717592448}
   m_CullTransparentMesh: 1
+--- !u!114 &717592452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717592448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4705681324c6d3e418c12c98ad36e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
 --- !u!1 &739811385
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,15 +589,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - prefab: {fileID: 8734197011054326394, guid: 7bb5f54d2af8c7748b7c553d316169cd, type: 3}
-    spawnChance: 0.054
-  - prefab: {fileID: 3112768895576667632, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
+  - prefab: {fileID: 4906917857128783684, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
+    spawnChance: 0.629
+  - prefab: {fileID: 7770921036266863717, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
     spawnChance: 0.008
   - prefab: {fileID: 9170501879578107058, guid: 7feaaa2bb1a9aed47aae926fe3ad2e74, type: 3}
     spawnChance: 0.081
-  - prefab: {fileID: 5191648054155504898, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
+  - prefab: {fileID: 1832497886249185308, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
     spawnChance: 0.008
-  - prefab: {fileID: 3566085182901286796, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
+  - prefab: {fileID: 3479303838154210267, guid: 51c5ab62a0554ca44bdb8a4f21b75b9e, type: 3}
     spawnChance: 0.072
   minSpawnRate: 1
   maxSpawnRate: 2
@@ -631,16 +646,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - prefab: {fileID: 8734197011054326394, guid: 7bb5f54d2af8c7748b7c553d316169cd, type: 3}
-    spawnChance: 0.054
-  - prefab: {fileID: 3112768895576667632, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
+  - prefab: {fileID: 3479303838154210267, guid: 51c5ab62a0554ca44bdb8a4f21b75b9e, type: 3}
+    spawnChance: 0.006
+  - prefab: {fileID: 1832497886249185308, guid: 04363ba291b5dc243a0a0179022f6e41, type: 3}
+    spawnChance: 0.006
+  - prefab: {fileID: 4906917857128783684, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
+    spawnChance: 0.034
+  - prefab: {fileID: 7770921036266863717, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
     spawnChance: 0.009
-  - prefab: {fileID: 3566085182901286796, guid: 2274c7917b3091149b5527afd0aba4d2, type: 3}
-    spawnChance: 0
-  - prefab: {fileID: 5191648054155504898, guid: 44be00be58768e043a4018b4f4e6d21d, type: 3}
-    spawnChance: 0.054
   - prefab: {fileID: 9170501879578107058, guid: 7feaaa2bb1a9aed47aae926fe3ad2e74, type: 3}
-    spawnChance: 0.081
+    spawnChance: 0.006
   minSpawnRate: 1
   maxSpawnRate: 2
 --- !u!4 &1080938105
