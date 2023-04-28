@@ -35,8 +35,10 @@ public class GameManager : MonoBehaviour
         NewGame();
     }
     public void NewGame(){
+        
         calculation.scoreValue=0;
-        spawner.gameObject.SetActive(true);
+        spawner.gameObject.SetActive(false);
+
         retryButton.gameObject.SetActive(false);
 
     }
@@ -53,8 +55,8 @@ public class GameManager : MonoBehaviour
 
     enabled = false;
 
-    spawner.gameObject.SetActive(false);
-
+    //spawner.gameObject.SetActive(false);
+    Destroy(this);
     //gameOverText.gameObject.SetActive(true);
     retryButton.gameObject.SetActive(true);
     //UpdateHiScore();

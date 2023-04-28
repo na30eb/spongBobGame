@@ -6,6 +6,7 @@ TagManager:
   tags:
   - plus
   - Minus
+  - Spawner
   layers:
   - Default
   - TransparentFX
